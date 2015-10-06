@@ -1,0 +1,187 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:600);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+
+body{
+	margin:0;
+	padding:0;
+	background-color:#D1E0FF;
+}
+
+.header{	
+	background-color:#FCFCFC;
+	padding-top: 50px;
+	height:220px;
+}
+
+.inHeader{
+	margin-left:auto;
+	margin-right:auto;
+	width:1200px;
+}
+
+.footer {
+	background-color:#2B2B2B;
+	text-align: right;
+	font-size: 15px;
+	color:white;
+	padding:20px;
+	height: 5%;
+}
+
+.titleArea{
+	margin-bottom:50px;
+}
+
+#logo {
+	width: 84px;
+	height: 60px;
+	float: left;
+}
+
+#titleText {
+	color: black;
+	font-family: 'Oswald', sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	margin:0;
+	padding:0;
+}
+
+#toLoginButton, #toRegisterButton {	
+	float:right;
+	margin:10px;
+	width:100px;
+	height:50px;
+	background-color:#FCFCFC;
+	padding: 10px;
+	font-size: 15px;
+	font-weight:bold;
+	border:none;
+	cursor:pointer;
+}
+
+#toLoginButton:hover, #toRegisterButton:hover{
+	color:#6699FF;	
+}
+
+h2 {
+	font-size: 25px;
+}
+
+#map {
+	width: 600px;
+	height: 400px;
+}
+
+#icon {	
+	display:block;
+	margin:0 auto;
+}
+
+#introText {
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+	font-size: 30px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.menu {
+	border-top: 1px solid #999999;
+	display: inline-block;
+	position: relative;
+	float: left;
+	width: 180px;
+	margin-right: 15px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 30px;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+	float: left;
+	color:black;
+}
+
+.menu:hover {	
+	font-weight: bold;
+	color: #2196F3;
+}
+
+.mainArea {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+	height: 80%;
+	background-color:white;
+	padding:50px;	
+	border: 1px solid #EBF5FF;
+}
+
+.menuArea {
+	margin-bottom:50px;
+}
+
+.subMenuArea {
+	margin-left: 50px;
+	float: left;
+	width: 200px;
+	margin-right: 50px;
+}
+
+.subMenuList {
+	margin-right: 30px;
+	float: left;
+	padding-bottom: 50px;
+	border-top: 5px solid #3399FF;
+	border-left: 1px solid #EBF5FF;
+	border-right: 1px solid #EBF5FF;
+	border-bottom: 1px solid #EBF5FF;
+}
+
+.subMenu {
+	display: inline-block;
+	width: 150px;
+	font-size: 15px;
+	margin-top: 50px;
+	color: black;
+}
+
+.subMenu:hover {
+	font-weight: bold;
+	color: #2196F3;
+}
+
+.subMenuSelected {
+	color: #2196F3;
+	font-weight: bold;
+}
+
+.contentArea {
+	float: left;
+	width: 800px;
+}
+
+h3 {
+	border-bottom: 3px solid #CCCCCC;
+	padding-bottom: 10px;
+	font-size: 25px;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+}
+
+#siteLink{
+	color: blue;
+	font-weight: bold;
+}
+
+.successMessageArea{
+	margin-top:500px;
+	width:300px;
+	margin:auto;
+}

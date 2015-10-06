@@ -1,0 +1,30 @@
+.profileArea{
+	
+}
+
+.profilePhoto{
+	margin-left:300px;
+	margin-right:300px;
+	margin-bottom:50px;
+	width:200px;
+}
+
+.titleBox{
+	text-algin:center;
+	float:left;
+	font-size:25px;
+	font-weight:bold;
+	margin-left:150px;
+	padding:10px;
+	width:160px;
+	height:60px;
+}
+
+.dataBox{
+	float:left;
+	margin-right:100px;
+	width:300px;
+	padding:20px;
+	height:40px;
+}
+

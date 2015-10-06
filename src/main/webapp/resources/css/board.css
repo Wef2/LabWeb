@@ -1,0 +1,240 @@
+table {
+	border-collapse: collapse; 
+	margin: auto;
+	padding: 0;
+}
+
+tr{	
+	height: 60px;
+	border-bottom: 1px solid #555555;
+}
+
+td {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	height: 60px;
+}
+
+.board_top {
+	background-color: #85C2FF;
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+	border: 1px solid #CDCDCD;
+}
+
+#board_number {
+	width: 100px;
+}
+
+#board_title {
+	font-weight:bold;	
+	width: 500px;
+}
+
+#board_id {
+	width: 200px;
+}
+
+#board_date {
+	width: 200px;
+}
+
+#board_hits {
+	width: 100px;
+}
+
+#writeButton {
+	float: right;
+	border: 0;
+	background-color: #538fbe;
+	padding: 10px;
+	font-size: 20px;
+	border: 1px solid #DDDDDD;
+	border-radius: 20px;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#writeButton:hover {
+	border: 1px solid #AAAAAA;
+	color: #538fbe;
+	background-color: white;
+}
+
+#submitButton {
+	margin-top: 10px;
+	width: 150px;
+	float: right;
+	height: 60px;
+	background-color: #538fbe;
+	padding: 20px;
+	font-size: 20px;
+	border: 1px solid #2d6898;
+	border-radius: 20px;
+	color: white;
+	font-weight: bold;
+	color: white;
+}
+
+#submitButton:hover {
+	border: 1px solid #AAAAAA;
+	color: #538fbe;
+	background-color: white;
+}
+
+#toBoardButton{
+	margin-top: 10px;
+	background-color: #538fbe;
+	padding: 20px;
+	font-size: 20px;
+	border: 1px solid #2d6898;
+	border-radius: 20px;
+	color: white;
+	font-weight: bold;
+	color: white;
+}
+
+#toBoardButton:hover{
+	border: 1px solid #AAAAAA;
+	color: #538fbe;
+	background-color: white;
+}
+
+#selectOptions{
+	float:left;
+	margin-right:10px;
+	padding:0;
+	width:100px;
+	height:40px;
+	font-size:20px;
+}
+
+.pageNumberArea{
+	padding:20px;
+	width:600px;
+	margin:0 auto;
+	text-align:center;
+}
+
+.pageNumber{
+	margin:5px;
+	font-size:15px;
+}
+
+.searchArea{
+	padding:20px;
+	width:800px;
+	margin:0 auto;
+}
+
+#searchInput{
+	width:500px;
+	height:35px;
+	font-size:20px;
+	resize:none;
+	margin:0;
+}
+
+#searchButton{
+	width:30px;
+	cursor:pointer;
+}
+
+.noBox{
+	padding:10px;
+	border-bottom:1px solid #DDDDDD;
+	width:150px;
+	height:30px;	
+}
+
+.titleBox{
+	padding:10px;
+	border-bottom:1px solid #DDDDDD;
+	width:980px;
+	font-size:30px;
+	font-weight:bold;
+}
+
+.textBox{
+	padding:10px;
+	border-bottom:1px solid #DDDDDD;
+	width:980px;
+	height:400px;	
+}
+
+.writerBox{
+	padding:10px;
+	border-bottom:1px solid #DDDDDD;
+	width:980px;
+	height:30px;	
+}
+
+.dateBox{
+	padding:10px;
+	border-bottom:1px solid #DDDDDD;
+	width:150px;
+	height:30px;	
+}
+
+.hitsBox{
+	padding:10px;
+	border-bottom:1px solid #DDDDDD;
+	width:150px;
+	height:30px;	
+}
+
+.boardButton{
+	padding:10px;
+	margin-top:30px;
+	margin-left:15px;
+	width:120px;
+	height:45px;
+	border:none;
+	color:white;
+	font-size:20px;
+	font-weight:bold;
+	background-color:#777777;
+	border-radius:20px;
+}
+
+.boardButton:hover{
+	background-color:#444444;
+}
+
+#titleInput{
+	width:800px;
+	padding:10px;
+	font-size:18px;
+	margin-bottom:30px;
+}
+
+#textInput{
+	width:1200px;
+	height:600px;
+	padding:10px;
+}
+
+
+.readArea{
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+}
+
+.modifyForm, .deleteForm{
+	float:left;
+	width:200px;
+	margin:0;
+	padding:0;
+}
+
+.blueColor{
+	color:black;
+}
+
+.blueColor:hover{
+	color:#0066FF;
+}

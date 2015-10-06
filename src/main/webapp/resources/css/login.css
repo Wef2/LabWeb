@@ -1,0 +1,71 @@
+.loginBox{
+	margin:auto;
+	width:500px;
+	border:1px solid #DDDDDD;
+}
+
+.loginBoxHeader{
+	font-family: 'Oswald', sans-serif;
+	font-size:30px;
+	font-weight:bold;
+	padding:10px;
+	text-align:center;
+	background-color:#75A3FF;
+	height:50px;
+	color:white;
+}
+
+.loginBoxMain{
+	padding:25px;
+}
+
+.loginBoxText{	
+	font-size:18px;
+	font-weight:bold;
+}
+
+#loginButton{
+	margin-top:30px;
+	margin-left:165px;
+	width:120px;
+	height:45px;
+	border:none;
+	color:white;
+	font-size:20px;
+	font-weight:bold;
+	background-color:#777777;
+	border-radius:20px;
+}
+
+#loginButton:hover{
+	background-color:#444444;
+}
+
+#idInput{
+	width:450px;
+	height:40px;
+	font-size:20px;
+	padding:10px;
+}
+
+#passwordInput{	
+	width:450px;
+	height:40px;
+	font-size:20px;
+	padding:10px;
+}
+
+#retryButton{
+	padding:10px;
+	border:none;
+	color:white;
+	font-size:20px;
+	font-weight:bold;
+	background-color:#777777;
+	border-radius:20px;
+}
+
+#retryButton:hover{
+	color:#777777;
+	background-color:white;
+}

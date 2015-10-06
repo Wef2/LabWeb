@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardMapper">
+
+	<insert id="addBoardData" parameterType="BoardDataVo">
+		INSERT
+		INTO t_board(title, text, date, hits)
+		VALUES(#{title}, #{text}, CONVERT(VARCHAR, GETDATE(), 120), 0);
+	</insert>
+
+	<select id="getBoardList" resultType="BoardDataVo">
+		SELECT
+		* FROM t_board
+		ORDER BY no DESC;
+	</select>
+	
+	<select id="getBoardPartList" resultType="BoardDataVo">
+		SELECT
+		* FROM t_board
+		ORDER BY no DESC;
+	</select>
+
+	<select id="getBoardData" parameterType="BoardDataVo" resultType="BoardDataVo">
+		SELECT *
+		FROM t_board
+		WHERE no = #{no}
+	</select>
+
+	<update id="updateBoardData" parameterType="BoardDataVo">
+		UPDATE
+		t_board SET title=#{title}, text=#{text}
+		WHERE no = #{no}
+	</update>
+	
+	<update id="increaseBoardHits" parameterType="BoardDataVo">
+		UPDATE
+		t_board SET hits=#{hits} 
+		WHERE no=#{no}
+	</update>
+
+	<delete id="deleteBoardData" parameterType="int">
+		DELETE
+		FROM t_board
+		WHERE no = #{no}
+	</delete>
+
+</mapper>
