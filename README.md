@@ -4,4 +4,4 @@ Spring Framework, Mybatis, MSSQL
 
 ### To do
 
-Paging, Profile
+Paging, Profile, Design, Documentation, etc.
