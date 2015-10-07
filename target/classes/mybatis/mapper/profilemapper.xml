@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ProfileMapper">
+
+	<select id="getProfileList" resultType="ProfileVo">
+		SELECT
+		* FROM t_profile
+	</select>
+	
+	<select id="getProfile" parameterType="ProfileVo" resultType="ProfileVo">
+		SELECT *
+		FROM t_profile
+		WHERE no = #{no}
+	</select>
+
+	<delete id="deleteProfile" parameterType="int">
+		DELETE
+		FROM t_profile
+		WHERE no = #{no}
+	</delete>
+
+</mapper>

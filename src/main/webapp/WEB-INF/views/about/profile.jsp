@@ -16,18 +16,18 @@
 		<div class="contentArea">
 			<h3>Profile</h3>
 			<div class="profileArea">
-				<img class="profilePhoto" src="/webpage/resources/images/profile.jpg" />
-				<div class="nameArea">Mobile Kim</div>
-				<div class="typeArea">Student</div>
+				<img class="profilePhoto" src="/webpage/resources/images/${image}" />
+				<div class="nameArea">${name}</div>
+				<div class="typeArea">${type}</div>
 				<div class="universityArea">Jeju National University Mobile Computing Lab</div>
 			</div>
 			<div class="informationArea">
 				<div class="informTitleArea">Phone</div>
-				<div class="informContentArea">None</div>
+				<div class="informContentArea">${phone}</div>
 				<div class="informTitleArea">E-Mail</div>
-				<div class="informContentArea">None</div>
+				<div class="informContentArea">${email}</div>
 				<div class="informTitleArea">SNS</div>
-				<div class="informContentArea">None</div>
+				<div class="informContentArea">${sns}</div>
 			</div>
 		</div>
 	</div>

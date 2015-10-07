@@ -11,12 +11,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.mcl.sv.model.DownloadVo;
 import com.mcl.sv.model.EventVo;
 import com.mcl.sv.model.NewsVo;
+import com.mcl.sv.model.ProfileVo;
 import com.mcl.sv.model.UserVo;
 import com.mcl.sv.model.BoardDataVo;
 import com.mcl.sv.model.service.BoardService;
 import com.mcl.sv.model.service.DownloadService;
 import com.mcl.sv.model.service.EventService;
 import com.mcl.sv.model.service.NewsService;
+import com.mcl.sv.model.service.ProfileService;
 import com.mcl.sv.model.service.UserService;
 
 /**
@@ -39,6 +41,9 @@ public class PageController {
 	
 	@Autowired
 	private DownloadService downloadService;
+	
+	@Autowired
+	private ProfileService profileService;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
@@ -57,11 +62,23 @@ public class PageController {
 
 	@RequestMapping(value = "/about/people", method = RequestMethod.GET)
 	public String aboutthepeople(Model model) {
+		List<ProfileVo> list = profileService.getProfileList();
+		model.addAttribute("list", list);
 		return "about/people";
 	}
 	
 	@RequestMapping(value = "/about/profile", method = RequestMethod.GET)
-	public String profile(Model model) {
+	public String profile(int no, Model model) {
+		ProfileVo newProfileVo = new ProfileVo();
+		newProfileVo.setNo(no);
+		ProfileVo profileVo = profileService.getProfile(newProfileVo);
+		model.addAttribute("no", profileVo.getNo());
+		model.addAttribute("name", profileVo.getName());
+		model.addAttribute("type", profileVo.getType());
+		model.addAttribute("phone", profileVo.getPhone());
+		model.addAttribute("email", profileVo.getEmail());
+		model.addAttribute("sns", profileVo.getSns());	
+		model.addAttribute("image", profileVo.getImage());
 		return "about/profile";
 	}
 

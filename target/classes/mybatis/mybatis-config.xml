@@ -9,5 +9,6 @@
 		<typeAlias type="com.mcl.sv.model.EventVo" alias="EventVo" />
 		<typeAlias type="com.mcl.sv.model.NewsVo" alias="NewsVo" />
 		<typeAlias type="com.mcl.sv.model.DownloadVo" alias="DownloadVo" />
+		<typeAlias type="com.mcl.sv.model.ProfileVo" alias="ProfileVo" />
 	</typeAliases>
 </configuration>

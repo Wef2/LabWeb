@@ -6,7 +6,8 @@
 <head>
 <title>Jeju National University Mobile Computing Lab</title>
 
-<link href="/webpage/resources/css/style.css" rel="stylesheet"	type="text/css" />
+<link href="/webpage/resources/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/webpage/resources/css/about.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
@@ -14,14 +15,13 @@
 		<jsp:include page="/WEB-INF/views/common/submenu_about.jsp"></jsp:include>
 		<div class="contentArea">
 			<h3>People</h3>
-			<p>Professor</p>
-			<p>Do-Hyeun Kim</p>
-			<br>
-			<p>Wenquen Jin</p>
-			<p>Hyun-Jun Yang</p>
-			<p>Do-Yeon Kim</p>
-			<p>Bo-Kyung Kim</p>
-			<p>...</p>
+			<c:forEach var="profile" items="${list}" varStatus="status">
+				<div class ="peopleArea">
+					<img class="peoplePhoto" src="/webpage/resources/images/${profile.image}" />
+					<div class="peopleTypeArea">${profile.type}</div>
+					<div class="peopleNameArea"><a class="textColorA" href="/webpage/about/profile?no=${profile.no}">${profile.name}</a></div>					
+				</div>
+			</c:forEach>
 		</div>
 	</div>
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
