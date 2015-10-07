@@ -15,7 +15,7 @@
 				<li><a class="menu" href="/webpage">Home</a></li>
 				<li><a class="menu" href="/webpage/about">About</a>
 				<li><a class="menu"	href="/webpage/research">Research</a></li>
-				<li><a class="menu"	href="/webpage/newsandevents">News & Events</a></li>
+				<li><a class="menu"	href="/webpage/newsandevents">News and Events</a></li>
 				<li><a class="menu" href="/webpage/board">Board</a></li>
 			</ul>
 		</div>

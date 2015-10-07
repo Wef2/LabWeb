@@ -20,7 +20,7 @@ public class DownloadController implements ApplicationContextAware {
 	public ModelAndView download(@RequestParam("fileName") String fileName) {
 
 		
-		String path = "C:\\uploadfiles";
+		String path = "C://Users/Kim/Documents/GitHub/LabWeb/src/main/webapp/resources/files";
 				
 		String fullPath = path + "\\" + fileName;
 
