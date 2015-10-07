@@ -22,7 +22,7 @@
 				<div class="universityArea">Jeju National University Mobile Computing Lab</div>
 			</div>
 			<div class="informationArea">
-				<div class="informTitleArea">Contact</div>
+				<div class="informTitleArea">Phone</div>
 				<div class="informContentArea">None</div>
 				<div class="informTitleArea">E-Mail</div>
 				<div class="informContentArea">None</div>
