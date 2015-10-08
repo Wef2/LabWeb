@@ -1,36 +1,53 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:400);
-@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:600);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
 body{
 	margin:0;
 	padding:0;
-	background-color:#D1E0FF;
 }
 
-.header{	
-	background-color:#FCFCFC;
-	padding-top: 50px;
-	height:220px;
+.header{		
+	border-bottom:1px solid #DDDDDD; 
 }
 
-.inHeader{
+.titleArea{	
+	height:100px;
+	margin-bottom:30px;
+}
+
+.inTitleArea{
 	margin-left:auto;
 	margin-right:auto;
-	width:1200px;
+	margin-top:50px;
+	margin-bottom:10px;
+	width:1300px;
+}
+
+.menuArea {
+	height:80px;
+}
+
+.inMenuArea{
+	width:1300px;	
+	margin-left:auto;
+	margin-right:auto;
 }
 
 .footer {
+	background-color:#2B2B2B;
+}
+
+.inFooter{
+	width:1300px;
+	margin-left:auto;
+	margin-right:auto;
 	background-color:#2B2B2B;
 	text-align: right;
 	font-size: 15px;
 	color:white;
 	padding:20px;
-	height: 5%;
-}
-
-.titleArea{
-	margin-bottom:50px;
+	height:5%;
 }
 
 #logo {
@@ -39,7 +56,8 @@ body{
 	float: left;
 }
 
-#titleText {
+#titleText {	
+	text-align:center;
 	color: black;
 	font-family: 'Oswald', sans-serif;
 	font-size: 40px;
@@ -51,18 +69,18 @@ body{
 #toLoginButton, #toRegisterButton {	
 	float:right;
 	margin:10px;
-	width:100px;
-	height:50px;
-	background-color:#FCFCFC;
 	padding: 10px;
 	font-size: 15px;
 	font-weight:bold;
 	border:none;
 	cursor:pointer;
+	color:#538fbe;
+	border-radius:20px;
+	background-color:white;
 }
 
 #toLoginButton:hover, #toRegisterButton:hover{
-	color:#6699FF;	
+	color:#337fbe;
 }
 
 h2 {
@@ -90,17 +108,13 @@ ul {
 }
 
 .menu {
-	border-top: 1px solid #999999;
 	display: inline-block;
 	position: relative;
 	float: left;
-	width: 180px;
-	margin-right: 15px;
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 30px;
-	padding: 10px;
+	width: 240px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 25px;
 	text-align: center;
-	font-weight: bold;
 	float: left;
 	color:black;
 }
@@ -114,21 +128,15 @@ ul {
 	overflow:hidden;
 	margin-left: auto;
 	margin-right: auto;
-	width: 1200px;
+	width: 1300px;
 	background-color:white;
-	padding:50px;	
-	border: 1px solid #EBF5FF;
 	padding-top:50px;
 	padding-bottom:100px;
 }
 
-.menuArea {
-	margin-bottom:50px;
-}
-
 .contentArea {
 	float:left;
-	width: 850px;
+	width: 950px;
 }
 
 .subMenuArea {	
