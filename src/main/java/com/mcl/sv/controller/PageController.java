@@ -26,7 +26,7 @@ import com.mcl.sv.model.service.UserService;
  */
 @Controller
 public class PageController {
-
+	
 	@Autowired
 	private UserService userService;
 	
@@ -124,7 +124,7 @@ public class PageController {
 	}
 
 	@RequestMapping(value = "/board", method = RequestMethod.GET)
-	public String board(Model model) {
+	public String board(Model model){
 		List<BoardDataVo> list = boardService.getBoardList();
 		int boardSize = boardService.getTotalCount();
 		int pageRows = 10;
@@ -134,13 +134,20 @@ public class PageController {
 		model.addAttribute("list", list);
 		return "board/board";
 	}
-
+	
 	@RequestMapping(value = "/board/write", method = RequestMethod.GET)
 	public String write(Model model) {
 		return "board/write";
 	}
 	
-	@RequestMapping(value = "board/read", method = RequestMethod.GET)
+	@RequestMapping(value = "/board/search", method = RequestMethod.GET)
+	public String boardSearchByTitle(String keyword, Model model){
+		List<BoardDataVo> list = boardService.getSearchByTitleList();
+		model.addAttribute("list", list);
+		return "board/board";
+	}
+	
+	@RequestMapping(value = "/board/read", method = RequestMethod.GET)
 	public String read(int no, Model model) {
 		BoardDataVo boardDataVo = new BoardDataVo();
 		boardDataVo.setNo(no);
@@ -183,7 +190,7 @@ public class PageController {
 		}
 	}
 	
-	@RequestMapping(value = "board/modify", method = RequestMethod.POST)
+	@RequestMapping(value = "/board/modify", method = RequestMethod.POST)
 	public String modify(int no, Model model){
 		BoardDataVo boardDataVo = new BoardDataVo();
 		boardDataVo.setNo(no);
@@ -201,7 +208,7 @@ public class PageController {
 		}
 	}
 	
-	@RequestMapping(value = "board/update", method = RequestMethod.POST)
+	@RequestMapping(value = "/board/update", method = RequestMethod.POST)
 	public String update(int no, String title, String text, Model model){
 		BoardDataVo boardDataVo = new BoardDataVo();
 		boardDataVo.setNo(no);

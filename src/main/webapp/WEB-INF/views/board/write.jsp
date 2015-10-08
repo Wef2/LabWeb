@@ -17,7 +17,7 @@
 		<form method="POST" action="writeText">
 			Title : <input id="titleInput" type="text" name="title"></input> 
 			<br>
-			Text <textarea id="textInput" name="text"></textarea>
+			<textarea id="textInput" name="text"></textarea>
 			<input id="submitButton" type="submit" value="Submit"/>
 		</form>
 	</div>

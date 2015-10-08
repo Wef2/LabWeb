@@ -1,6 +1,8 @@
 .newsArea{
 	padding:10px;
-	width:780px;
+	width:850px;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 .newsTitle{

@@ -4,7 +4,9 @@
 }
 
 .documentArea{
-	width:780px;
+	margin-left:auto;
+	margin-right:auto;
+	width:850px;
 	padding:10px;
 }
 
