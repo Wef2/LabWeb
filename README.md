@@ -1,7 +1,7 @@
-# 웹사이트
+# Web
 
 Spring Framework, Mybatis, MSSQL
 
 ### To do
 
-Paging, Session, Search, Spring Security, Responsive Web Design, Documentation, etc
+Paging, Session, Spring Security, Responsive Web Design, Documentation, etc
