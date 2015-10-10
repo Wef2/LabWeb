@@ -142,7 +142,7 @@ public class PageController {
 	
 	@RequestMapping(value = "/board/search", method = RequestMethod.GET)
 	public String boardSearchByTitle(String keyword, Model model){
-		List<BoardDataVo> list = boardService.getSearchByTitleList();
+		List<BoardDataVo> list = boardService.getSearchByTitleList(keyword);
 		model.addAttribute("list", list);
 		return "board/board";
 	}

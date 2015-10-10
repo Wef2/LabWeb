@@ -17,7 +17,7 @@
 	<select id="getSearchByTitleList" resultType="BoardDataVo">
 		SELECT
 		* FROM t_board
-		WHERE title LIKE '%#{keyword}%';
+		WHERE title LIKE CONCAT('%', #{keyword}, '%')
 	</select>
 		
 	<select id="getBoardPartList" resultType="BoardDataVo">

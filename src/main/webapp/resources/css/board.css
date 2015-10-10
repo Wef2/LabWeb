@@ -142,8 +142,17 @@ td {
 }
 
 #searchButton{
-	width:30px;
-	cursor:pointer;
+	width:100px;
+	cursor:pointer;	
+	background-color: #538fbe;
+	color:white;
+	padding:10px;
+	font-size:20px;
+	border:0;
+}
+
+#searchButton:hover{
+	background-color:#3366FF;
 }
 
 .noBox{

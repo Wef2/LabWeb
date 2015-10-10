@@ -22,8 +22,8 @@ public class BoardService {
 		return sqlSession.selectList("BoardMapper.getBoardList");
 	}
 	
-	public List<BoardDataVo> getSearchByTitleList() {
-		return sqlSession.selectList("BoardMapper.getSearchByTitleList");
+	public List<BoardDataVo> getSearchByTitleList(String keyword) {
+		return sqlSession.selectList("BoardMapper.getSearchByTitleList", keyword);
 	}
 	
 	public BoardDataVo getBoardData(BoardDataVo boardDataVo) {
