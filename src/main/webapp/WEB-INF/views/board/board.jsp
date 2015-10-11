@@ -22,14 +22,20 @@
 			</tr>
 			<c:forEach var="board" items="${list}" varStatus="status">
 				<tr>
-					<td id="board_number"><a class="blueColor" href="board/read?no=${board.no}">${board.no}</a></td>
-					<td id="board_title"><a class="blueColor" href="board/read?no=${board.no}">${board.title}</a></td>
+					<td id="board_number"><a class="blueColor" href="board/read?no=${board.rowNumber}">${board.rowNumber}</a></td>
+					<td id="board_title"><a class="blueColor" href="board/read?no=${board.rowNumber}">${board.title}</a></td>
 					<td id="board_id">${board.writer}</td>
 					<td id="board_date">${board.date}</td>
 					<td id="board_hits">${board.hits}</td>
 				</tr>
 			</c:forEach>
 		</table>
+		<div class = "pageArea">
+			<c:forEach var="page" begin="${firstPage}" end="${lastPage}" step="1" >
+			<div class="pageNumber">${page}</div>
+			</c:forEach>
+		</div>
+		
 		<div class="searchArea">
 			<select id="selectOptions">
 				<option>Title</option>

@@ -14,17 +14,17 @@
 	<div class="mainArea">
 		<div class="readArea">		
 			<div class="titleBox">${title}</div>	
-			<div class="noBox">No. ${no}</div>
+			<div class="noBox">No. ${rowNumber}</div>
 			<div class="dateBox">${date}</div>		
 			<div class="hitsBox">Hits : ${hits}</div>				
 			<div class="writerBox">Writer : ${writer}</div>
 			<div class="textBox">${text}</div>
 			<form class="modifyForm" method="post" action="modify">
-				<input type="hidden" name="no" value='${no}'/>
+				<input type="hidden" name="no" value='${rowNumber}'/>
 				<input class="boardButton" type="submit" value="Modify"/>
 			</form>
 			<form class="deleteForm" method="post" action="delete">
-				<input type="hidden" name="no" value='${no}'/>
+				<input type="hidden" name="no" value='${rowNumber}'/>
 				<input class="boardButton" type="submit" value="Delete"/>
 			</form>
 			<a href="/webpage/board"><button class="boardButton">Board</button></a>

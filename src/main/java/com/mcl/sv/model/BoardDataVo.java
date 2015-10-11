@@ -1,12 +1,21 @@
 package com.mcl.sv.model;
 
 public class BoardDataVo {
+	private int rowNumber;
 	private int no;
 	private String title;
 	private String text;
 	private String writer;
 	private String date;
 	int hits;
+	
+	public void setRowNumber(int rowNumber){
+		this.rowNumber = rowNumber;
+	}
+	
+	public int getRowNumber(){
+		return rowNumber;
+	}
 	
 	public void setNo(int no){
 		this.no = no;

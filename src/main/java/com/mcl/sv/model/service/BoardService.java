@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.mcl.sv.model.BoardDataVo;
+import com.mcl.sv.model.PageVo;
 
 @Service
 public class BoardService {
@@ -14,20 +15,24 @@ public class BoardService {
 	@Autowired	
 	private SqlSessionTemplate sqlSession;
 	
-	public int getTotalCount(){
-		return sqlSession.selectList("BoardMapper.getBoardList").size();
+	public int getBoardSize(){
+		return sqlSession.selectOne("BoardMapper.getBoardSize");
 	}
 
-	public List<BoardDataVo> getBoardList() {
-		return sqlSession.selectList("BoardMapper.getBoardList");
+	public List<BoardDataVo> getBoardList(PageVo pageVo) {
+		return sqlSession.selectList("BoardMapper.getBoardList", pageVo);
 	}
-	
+		
 	public List<BoardDataVo> getSearchByTitleList(String keyword) {
 		return sqlSession.selectList("BoardMapper.getSearchByTitleList", keyword);
 	}
 	
-	public BoardDataVo getBoardData(BoardDataVo boardDataVo) {
-		return sqlSession.selectOne("BoardMapper.getBoardData", boardDataVo);
+	public int getNumber(int rowNumber){
+		return sqlSession.selectOne("BoardMapper.getNumber", rowNumber);
+	}
+	
+	public BoardDataVo getBoardData(int rowNumber) {
+		return sqlSession.selectOne("BoardMapper.getBoardData", rowNumber);
 	}
 	
 	public int increaseBoardHits(BoardDataVo boardDataVo) {

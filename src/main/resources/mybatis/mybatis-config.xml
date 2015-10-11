@@ -10,5 +10,6 @@
 		<typeAlias type="com.mcl.sv.model.NewsVo" alias="NewsVo" />
 		<typeAlias type="com.mcl.sv.model.DownloadVo" alias="DownloadVo" />
 		<typeAlias type="com.mcl.sv.model.ProfileVo" alias="ProfileVo" />
+		<typeAlias type="com.mcl.sv.model.PageVo" alias="PageVo" />
 	</typeAliases>
 </configuration>

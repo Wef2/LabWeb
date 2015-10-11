@@ -4,43 +4,63 @@
 
 	<insert id="addBoardData" parameterType="BoardDataVo">
 		INSERT
-		INTO t_board(title, text, date, hits)
-		VALUES(#{title}, #{text}, CONVERT(VARCHAR, GETDATE(), 120), 0);
+		INTO
+		t_board(title, text, date, hits)
+		VALUES(#{title}, #{text},
+		CONVERT(VARCHAR, GETDATE(), 120), 0);
 	</insert>
 
-	<select id="getBoardList" resultType="BoardDataVo">
-		SELECT
-		* FROM t_board
-		ORDER BY no DESC;
-	</select>
-	
-	<select id="getSearchByTitleList" resultType="BoardDataVo">
-		SELECT
-		* FROM t_board
-		WHERE title LIKE CONCAT('%', #{keyword}, '%')
-	</select>
-		
-	<select id="getBoardPartList" resultType="BoardDataVo">
-		SELECT
-		* FROM t_board
-		ORDER BY no DESC;
+	<select id="getBoardSize" resultType="int">
+		SELECT COUNT(*) FROM
+		t_board;
 	</select>
 
-	<select id="getBoardData" parameterType="BoardDataVo" resultType="BoardDataVo">
-		SELECT *
-		FROM t_board
-		WHERE no = #{no}
+	<select id="getSearchByTitleList" resultType="BoardDataVo">
+		SELECT
+		* FROM
+		t_board
+		WHERE title LIKE CONCAT('%', #{keyword}, '%')
+	</select>
+
+	<select id="getBoardList" parameterType="PageVo" resultType="BoardDataVo">
+		SELECT * FROM
+		(SELECT
+		ROW_NUMBER()
+		OVER(ORDER BY no) AS rowNumber, *
+		FROM t_board) AS board
+		WHERE board.rowNumber between #{firstRow} and #{lastRow}
+		ORDER BY rowNumber DESC
+	</select>
+	
+	<select id="getNumber" parameterType="int" resultType="int">
+		SELECT no FROM
+		(SELECT
+		ROW_NUMBER()
+		OVER(ORDER BY no) AS rowNumber, *
+		FROM t_board) AS board
+		WHERE board.rowNumber = #{rowNumber}
+	</select>
+
+	<select id="getBoardData" parameterType="int" resultType="BoardDataVo">
+		SELECT * FROM
+		(SELECT
+		ROW_NUMBER()
+		OVER(ORDER BY no) AS rowNumber, *
+		FROM t_board) AS board
+		WHERE board.rowNumber = #{rowNumber}
 	</select>
 
 	<update id="updateBoardData" parameterType="BoardDataVo">
 		UPDATE
-		t_board SET title=#{title}, text=#{text}
+		t_board SET
+		title=#{title}, text=#{text}
 		WHERE no = #{no}
 	</update>
-	
+
 	<update id="increaseBoardHits" parameterType="BoardDataVo">
 		UPDATE
-		t_board SET hits=#{hits} 
+		t_board SET
+		hits=#{hits}
 		WHERE no=#{no}
 	</update>
 
