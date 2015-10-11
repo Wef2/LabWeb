@@ -14,7 +14,6 @@
 	<div class="mainArea">
 		<div class="readArea">		
 			<div class="titleBox">${title}</div>	
-			<div class="noBox">No. ${rowNumber}</div>
 			<div class="dateBox">${date}</div>		
 			<div class="hitsBox">Hits : ${hits}</div>				
 			<div class="writerBox">Writer : ${writer}</div>

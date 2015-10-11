@@ -11,11 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.mcl.sv.model.DownloadVo;
 import com.mcl.sv.model.EventVo;
 import com.mcl.sv.model.NewsVo;
-import com.mcl.sv.model.PageVo;
 import com.mcl.sv.model.ProfileVo;
 import com.mcl.sv.model.UserVo;
-import com.mcl.sv.model.BoardDataVo;
-import com.mcl.sv.model.service.BoardService;
 import com.mcl.sv.model.service.DownloadService;
 import com.mcl.sv.model.service.EventService;
 import com.mcl.sv.model.service.NewsService;
@@ -30,9 +27,6 @@ public class PageController {
 	
 	@Autowired
 	private UserService userService;
-	
-	@Autowired
-	private BoardService boardService;
 	
 	@Autowired
 	private EventService eventService;
@@ -122,121 +116,6 @@ public class PageController {
 		List<EventVo> list = eventService.getEventList();
 		model.addAttribute("list", list);
 		return "newsandevents/events";
-	}
-
-	@RequestMapping(value = "/board", method = RequestMethod.GET)
-	public String board(Model model){
-		int boardSize = boardService.getBoardSize();
-		int pageRows = 10;
-		int totalPage = (int) Math.ceil((double)boardSize / pageRows);
-		int currentPage = totalPage;
-		int lastRow = boardSize;
-		int firstRow = boardSize - 9;
-		if(firstRow < 1){
-			firstRow = 1;
-		}
-		int firstPage = currentPage / 10 + 1;
-		int lastPage = currentPage / 10 + 10;
-		if(lastPage > totalPage){
-			lastPage = totalPage;
-		}
-		PageVo pageVo = new PageVo();
-		pageVo.setFirstRow(firstRow);
-		pageVo.setLastRow(lastRow);
-		List<BoardDataVo> list = boardService.getBoardList(pageVo);
-		System.out.println("Board Size : " + boardSize);
-		System.out.println("Total Page : " + totalPage);
-		System.out.println("First Row : " + firstRow);
-		System.out.println("Last Row : " + lastRow);
-		model.addAttribute("currentPage", currentPage);
-		model.addAttribute("firstPage", firstPage);
-		model.addAttribute("lastPage", lastPage);
-		model.addAttribute("list", list);
-		return "board/board";
-	}
-	
-	@RequestMapping(value = "/board/write", method = RequestMethod.GET)
-	public String write(Model model) {
-		return "board/write";
-	}
-	
-	@RequestMapping(value = "/board/search", method = RequestMethod.GET)
-	public String boardSearchByTitle(String keyword, Model model){
-		List<BoardDataVo> list = boardService.getSearchByTitleList(keyword);
-		model.addAttribute("list", list);
-		return "board/board";
-	}
-	
-	@RequestMapping(value = "/board/read", method = RequestMethod.GET)
-	public String read(int no, Model model) {
-		BoardDataVo GBoardDataVo = boardService.getBoardData(no);
-		if (GBoardDataVo != null) {
-			GBoardDataVo.setHits(GBoardDataVo.getHits() + 1);
-			boardService.increaseBoardHits(GBoardDataVo);
-			model.addAttribute("rowNumber", GBoardDataVo.getRowNumber());
-			model.addAttribute("text", GBoardDataVo.getText());
-			model.addAttribute("writer", GBoardDataVo.getWriter());
-			model.addAttribute("date", GBoardDataVo.getDate());
-			model.addAttribute("title", GBoardDataVo.getTitle());
-			model.addAttribute("hits", GBoardDataVo.getHits());
-			return "board/read";
-		} else {
-			return "board/readfailed";
-		}
-	}
-	
-	@RequestMapping(value = "/board/writeText", method = RequestMethod.POST)
-	public String writeText(String title, String text, Model model){
-		BoardDataVo boardDataVo = new BoardDataVo();
-		boardDataVo.setTitle(title);
-		boardDataVo.setText(text);
-		int affectedRow = boardService.addBoardData(boardDataVo);
-		if (affectedRow == 1) {
-			return "board/writesuccess";
-		} else {
-			return "board/write";
-		}	
-	}
-	
-	@RequestMapping(value = "/board/delete", method = RequestMethod.POST)
-	public String delete(int no, Model model){
-		int boardNumber = boardService.getNumber(no);
-		int affectedRow = boardService.deleteBoardData(boardNumber);
-		if(affectedRow == 1){
-			return "board/deletesuccess";
-		}else{
-			return "board/deletefailed";
-		}
-	}
-	
-	@RequestMapping(value = "/board/modify", method = RequestMethod.POST)
-	public String modify(int no, Model model){
-		BoardDataVo GBoardDataVo = boardService.getBoardData(no);
-		if (GBoardDataVo != null) {
-			model.addAttribute("rowNumber", GBoardDataVo.getRowNumber());
-			model.addAttribute("text", GBoardDataVo.getText());
-			model.addAttribute("writer", GBoardDataVo.getWriter());
-			model.addAttribute("date", GBoardDataVo.getDate());
-			model.addAttribute("title", GBoardDataVo.getTitle());
-			model.addAttribute("hits", GBoardDataVo.getHits());
-			return "board/modify";
-		} else {
-			return "board/readfailed";
-		}
-	}
-	
-	@RequestMapping(value = "/board/update", method = RequestMethod.POST)
-	public String update(int no, String title, String text, Model model){
-		BoardDataVo boardDataVo = new BoardDataVo();
-		boardDataVo.setNo(no);
-		boardDataVo.setTitle(title);
-		boardDataVo.setText(text);
-		int affectedRow = boardService.updateBoardData(boardDataVo);
-		if (affectedRow == 1) {
-			return "board/modifysuccess";
-		} else {
-			return "board";
-		}
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)

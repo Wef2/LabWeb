@@ -32,7 +32,10 @@
 		</table>
 		<div class = "pageArea">
 			<c:forEach var="page" begin="${firstPage}" end="${lastPage}" step="1" >
-			<div class="pageNumber">${page}</div>
+			<c:choose>
+			   <c:when test="${keyword != null}"><div class="pageNumber"><a href="board?page=${page}?keyword=${keyword}">${page}</a></div></c:when>
+			   <c:otherwise><div class="pageNumber"><a href="board?page=${page}">${page}</a></div></c:otherwise>
+			</c:choose>			
 			</c:forEach>
 		</div>
 		
@@ -41,7 +44,7 @@
 				<option>Title</option>
 				<option>ID</option>
 			</select>
-			<form method="get" action="board/search">
+			<form method="get" action="board">
 				<input id="searchInput" type="text" name="keyword" /> 
 				<input type="submit" id="searchButton" value="Search" />
 			</form>
