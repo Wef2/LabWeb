@@ -12,7 +12,11 @@
 	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
 
 	<div class="mainArea">
-		<h1>Hello  ${userID}</h1>
+		<img id="icon" src="/webpage/resources/images/jnuIcon.jpg"></img>
+		<p id="introText">Hello  ${userID}<p>
+		<p id="introText">안녕하세요 ${userID}님</p>
+		<p id="introText">Welcome to Mobile Computing Laboratory Website<p>
+		<p id="introText">모바일 컴퓨팅 웹사이트에 접속하신 것을 환영합니다.</p>
 	</div>
 
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>

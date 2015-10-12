@@ -16,10 +16,13 @@
 	</select>
 
 	<select id="getSearchByTitleList" resultType="BoardDataVo">
-		SELECT
-		* FROM
-		t_board
+		SELECT * FROM
+		(SELECT
+		ROW_NUMBER()
+		OVER(ORDER BY no) AS rowNumber, *
+		FROM t_board) AS board
 		WHERE title LIKE CONCAT('%', #{keyword}, '%')
+		ORDER BY rowNumber DESC
 	</select>
 
 	<select id="getBoardList" parameterType="PageVo" resultType="BoardDataVo">
@@ -40,8 +43,13 @@
 		FROM t_board) AS board
 		WHERE board.rowNumber = #{rowNumber}
 	</select>
+	
+	<select id="getBoardDataByNo" parameterType="int" resultType="BoardDataVo">
+		SELECT * FROM t_board
+		WHERE no = #{no}
+	</select>
 
-	<select id="getBoardData" parameterType="int" resultType="BoardDataVo">
+	<select id="getBoardDataByRowNumber" parameterType="int" resultType="BoardDataVo">
 		SELECT * FROM
 		(SELECT
 		ROW_NUMBER()

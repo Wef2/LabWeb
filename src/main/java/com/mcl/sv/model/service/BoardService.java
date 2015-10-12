@@ -31,8 +31,12 @@ public class BoardService {
 		return sqlSession.selectOne("BoardMapper.getNumber", rowNumber);
 	}
 	
-	public BoardDataVo getBoardData(int rowNumber) {
-		return sqlSession.selectOne("BoardMapper.getBoardData", rowNumber);
+	public BoardDataVo getBoardDataByNo(int no) {
+		return sqlSession.selectOne("BoardMapper.getBoardDataByNo", no);
+	}
+		
+	public BoardDataVo getBoardDataByRowNumber(int rowNumber) {
+		return sqlSession.selectOne("BoardMapper.getBoardDataByRowNumber", rowNumber);
 	}
 	
 	public int increaseBoardHits(BoardDataVo boardDataVo) {

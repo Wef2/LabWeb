@@ -72,11 +72,12 @@ public class BoardController {
 
 	@RequestMapping(value = "/board/read", method = RequestMethod.GET)
 	public String read(int no, Model model) {
-		BoardDataVo GBoardDataVo = boardService.getBoardData(no);
+		BoardDataVo GBoardDataVo = boardService.getBoardDataByRowNumber(no);
 		if (GBoardDataVo != null) {
 			GBoardDataVo.setHits(GBoardDataVo.getHits() + 1);
 			boardService.increaseBoardHits(GBoardDataVo);
 			model.addAttribute("rowNumber", GBoardDataVo.getRowNumber());
+			model.addAttribute("no", GBoardDataVo.getNo());
 			model.addAttribute("text", GBoardDataVo.getText());
 			model.addAttribute("writer", GBoardDataVo.getWriter());
 			model.addAttribute("date", GBoardDataVo.getDate());
@@ -114,7 +115,8 @@ public class BoardController {
 
 	@RequestMapping(value = "/board/modify", method = RequestMethod.POST)
 	public String modify(int no, Model model) {
-		BoardDataVo GBoardDataVo = boardService.getBoardData(no);
+		int boardNumber = boardService.getNumber(no); 
+		BoardDataVo GBoardDataVo = boardService.getBoardDataByNo(boardNumber);
 		if (GBoardDataVo != null) {
 			model.addAttribute("rowNumber", GBoardDataVo.getRowNumber());
 			model.addAttribute("text", GBoardDataVo.getText());
@@ -131,7 +133,8 @@ public class BoardController {
 	@RequestMapping(value = "/board/update", method = RequestMethod.POST)
 	public String update(int no, String title, String text, Model model) {
 		BoardDataVo boardDataVo = new BoardDataVo();
-		boardDataVo.setNo(no);
+		int boardNumber = boardService.getNumber(no);
+		boardDataVo.setNo(boardNumber);
 		boardDataVo.setTitle(title);
 		boardDataVo.setText(text);
 		int affectedRow = boardService.updateBoardData(boardDataVo);
