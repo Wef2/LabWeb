@@ -1,6 +1,10 @@
-# Web
+# Github
 
 http://github.com/Wef2/LabWeb
+
+# Website
+
+Closed
 
 ## Development Environment
 
