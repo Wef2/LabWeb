@@ -12,21 +12,16 @@ import com.mcl.sv.model.DownloadVo;
 import com.mcl.sv.model.EventVo;
 import com.mcl.sv.model.NewsVo;
 import com.mcl.sv.model.ProfileVo;
-import com.mcl.sv.model.UserVo;
 import com.mcl.sv.model.service.DownloadService;
 import com.mcl.sv.model.service.EventService;
 import com.mcl.sv.model.service.NewsService;
 import com.mcl.sv.model.service.ProfileService;
-import com.mcl.sv.model.service.UserService;
 
 /**
  * Handles requests for the application home page.
  */
 @Controller
 public class PageController {
-	
-	@Autowired
-	private UserService userService;
 	
 	@Autowired
 	private EventService eventService;
@@ -116,44 +111,6 @@ public class PageController {
 		List<EventVo> list = eventService.getEventList();
 		model.addAttribute("list", list);
 		return "newsandevents/events";
-	}
-
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String login(Model model) {
-		return "user/login";
-	}
-
-	@RequestMapping(value = "/userLogin", method = RequestMethod.POST)
-	public String userlogin(String id, String pw, Model model) {
-		UserVo mUser = new UserVo();
-		mUser.setId(id);
-		mUser.setPw(pw);
-		UserVo userVo = userService.getUser(mUser);
-		if (userVo != null) {
-			model.addAttribute("userID", userVo.getId());
-			return "user/loginsuccess";
-		} else {
-			return "user/loginfailed";
-		}
-	}
-
-	@RequestMapping(value = "/register", method = RequestMethod.GET)
-	public String register(Model model) {
-		return "user/register";
-	}
-
-	@RequestMapping(value = "/userRegister", method = RequestMethod.POST)
-	public String userRegister(String id, String pw, String confirmPw, String email, Model model) {
-		UserVo aUser = new UserVo();
-		aUser.setId(id);
-		aUser.setPw(pw);
-		aUser.setEmail(email);
-		int affectedRow = userService.addUser(aUser);
-		if (affectedRow == 1) {
-			return "user/registersuccess";
-		} else {
-			return "user/register";
-		}
 	}
 
 }
