@@ -3,7 +3,7 @@
 <div class="header">
 	<div class="titleArea">
 		<div class="inTitleArea">
-			<a href="/webpage"><p id="titleText">Jeju National University Mobile Computing Lab</p></a>
+			<a href="/webpage" id="titleText">Jeju National University Mobile Computing Lab</a>
 			<a href="/webpage/login"><button id="toLoginButton">Login</button></a>
 			<a href="/webpage/register"><button id="toRegisterButton">Register</button></a>
 		</div>

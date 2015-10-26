@@ -31,7 +31,6 @@ public class DownloadController implements ApplicationContextAware {
 
 	@Override
 	public void setApplicationContext(ApplicationContext arg0) throws BeansException {
-		// TODO Auto-generated method stub
 
 		this.context = (WebApplicationContext) arg0;
 
