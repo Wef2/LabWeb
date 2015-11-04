@@ -12,7 +12,7 @@ Development Tool : Eclipse MARS, Microsoft SQL Server Management Studio, Github
 
 Spring Framework, Mybatis, MSSQL
 
-#### To Do List
+## To Do List
 
 Documentation
  - PPT, HWP
@@ -34,4 +34,4 @@ Adding Contents
 
 Error Handling
 
-##### Laboratory Android Application
+## Laboratory Android Application
