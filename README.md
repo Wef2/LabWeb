@@ -33,5 +33,3 @@ Adding Contents
  - Information
 
 Error Handling
-
-## Laboratory Android Application
