@@ -1,7 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 
-<div class="footer">
-	<div class="inFooter">
-		<p>Jeju National University Department of Computer Engineering,	Mobile Computing Lab. 2015.</p>
-	</div>
-</div>
+<footer class="container-fluid text-right bg-darkgrey">
+	<p class="footerFont">Jeju National University Mobile Computing Lab</p>
+</footer>

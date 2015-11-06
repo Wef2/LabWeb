@@ -1,10 +1,17 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
-
-<div class="subMenuArea">
-	<h2>About</h2>
-	<ul class="subMenuList">
-		<li><a class="subMenu" href="/webpage/about">Contact</a></li>
-		<li><a class="subMenu" href="/webpage/about/aboutthelab">About the Lab</a></li>
-		<li><a class="subMenu" href="/webpage/about/people">People</a></li>
-	</ul>
+<div class="container-fluid text-center">
+	<div class="row">
+		<div class="col-sm-4">
+			<h2>About the Lab</h2>
+			<div class="imageLogo computer"></div>
+		</div>
+		<div class="col-sm-4">
+			<h2>Contact</h2>
+			<div class="imageLogo information"></div>
+		</div>
+		<div class="col-sm-4">
+			<h2>People</h2>
+			<div class="imageLogo people"></div>
+		</div>
+	</div>
 </div>

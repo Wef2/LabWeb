@@ -5,9 +5,8 @@
 <html>
 <head>
 <title>Jeju National University Mobile Computing Lab</title>
-
-<link href="/webpage/resources/css/style.css" rel="stylesheet"
-	type="text/css" />
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link href="/webpage/resources/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
@@ -17,9 +16,8 @@
 			<h3>Contact</h3>
 			<div id="map"></div>
 			<p>제주대학교 공과대학 4호관 4층 컴퓨터공학과 모바일 컴퓨팅 연구실</p>
-			<p>Mobile Computing Lab 423, Department of Computer Engineering,
-				The 4th Floor, 4th College of Engineering Building Jeju National
-				University, Jeju, South Korea</p>
+			<p>Mobile Computing Lab 423, Department of Computer Engineering, The 4th Floor, 4th College of Engineering
+				Building Jeju National University, Jeju, South Korea</p>
 		</div>
 	</div>
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>

@@ -6,6 +6,7 @@
 <head>
 <title>Jeju National University Mobile Computing Lab</title>
 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link href="/webpage/resources/css/style.css" rel="stylesheet" type="text/css" />
 <link href="/webpage/resources/css/board.css" rel="stylesheet" type="text/css" />
 </head>

@@ -1,22 +1,26 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 
-<div class="header">
-	<div class="titleArea">
-		<div class="inTitleArea">
-			<a href="/webpage" id="titleText">Jeju National University Mobile Computing Lab</a>
-			<a href="/webpage/login"><button id="toLoginButton">Login</button></a>
-			<a href="/webpage/register"><button id="toRegisterButton">Register</button></a>
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li><a href="/webpage">HOME</a></li>
+				<li><a href="/webpage/about">ABOUT</a></li>
+				<li><a href="/webpage/research">RESEARCH</a></li>
+				<li><a href="/webpage/newsandevents">NEWS AND EVENTS</a></li>
+				<li><a href="/webpage/board">BOARD</a></li>
+			</ul>
 		</div>
 	</div>
-	<div class="menuArea">
-		<div class="inMenuArea">
-			<ul>
-				<li><a class="menu" href="/webpage">Home</a></li>
-				<li><a class="menu" href="/webpage/about">About</a>
-				<li><a class="menu"	href="/webpage/research">Research</a></li>
-				<li><a class="menu"	href="/webpage/newsandevents">News and Events</a></li>
-				<li><a class="menu" href="/webpage/board">Board</a></li>
-			</ul>
-	</div>
-	</div>
+</nav>
+
+<div class="jumbotron text-center">
+	<h1>Jeju National University</h1>
+	<p>Mobile Computing Lab</p>
 </div>
+

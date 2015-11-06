@@ -5,21 +5,20 @@
 <html>
 <head>
 <title>Jeju National University Mobile Computing Lab</title>
-
-<link href="/webpage/resources/css/style.css" rel="stylesheet"
-	type="text/css" />
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link href="/webpage/resources/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-		<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
-		<div class="mainArea">
-			<jsp:include page="/WEB-INF/views/common/submenu_research.jsp"></jsp:include>
-			<div class="contentArea">
-				<h3>Mobile Computing</h3>
-				<img src="/webpage/resources/images/android.jpg"/>
-				<p>Mobile Computing, Android, Smart Phone</p>
-			</div>
+	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
+	<div class="mainArea">
+		<jsp:include page="/WEB-INF/views/common/submenu_research.jsp"></jsp:include>
+		<div class="contentArea">
+			<h3>Mobile Computing</h3>
+			<img src="/webpage/resources/images/android.jpg" />
+			<p>Mobile Computing, Android, Smart Phone</p>
 		</div>
-		<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
-	
+	</div>
+	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
+
 </body>
 </html>
