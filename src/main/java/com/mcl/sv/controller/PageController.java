@@ -42,19 +42,9 @@ public class PageController {
 
 	@RequestMapping(value = "/about", method = RequestMethod.GET)
 	public String about(Model model) {
-		return "about/contact";
-	}
-
-	@RequestMapping(value = "/about/aboutthelab", method = RequestMethod.GET)
-	public String aboutthelab(Model model) {
-		return "about/aboutthelab";
-	}
-
-	@RequestMapping(value = "/about/people", method = RequestMethod.GET)
-	public String aboutthepeople(Model model) {
 		List<ProfileVo> list = profileService.getProfileList();
 		model.addAttribute("list", list);
-		return "about/people";
+		return "about/about";
 	}
 	
 	@RequestMapping(value = "/about/profile", method = RequestMethod.GET)
