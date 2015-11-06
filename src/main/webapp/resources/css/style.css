@@ -2,6 +2,31 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
+.jumbotron { 
+    background-color: #f4511e; /* Orange */
+    color: #ffffff;
+}
+
+.bg-grey {
+    background-color: #f6f6f6;
+}
+
+
+.container-fluid {
+    padding: 100px 100px;
+}
+
+.logo {
+    font-size: 200px;
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+}
+
 body{
 	margin:0;
 	padding:0;

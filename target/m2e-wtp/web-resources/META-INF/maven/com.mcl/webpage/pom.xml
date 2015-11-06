@@ -33,6 +33,7 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+		
 		<!-- Spring Security -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
@@ -153,7 +154,14 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>4.1.5.RELEASE</version>
+			<version>4.1.5.RELEASE</version>					
+		</dependency>
+		
+		<!-- MSSQL JDBC -->
+		<dependency>
+		    <groupId>com.hynnet</groupId>
+		    <artifactId>sqljdbc4-chs</artifactId>
+		    <version>4.0.2206.100</version>
 		</dependency>
 		
 	</dependencies>

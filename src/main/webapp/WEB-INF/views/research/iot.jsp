@@ -18,7 +18,8 @@
 				<h3>IoT</h3>
 				<img id="iotImage" src="/webpage/resources/images/iot.png" />
 				<p>Internet of Things</p>
-				<p>Research on IoT platform, M2M, Smart Toys, Sensor nodes, Middleware, CoAP, Building energy optimization, Service Modeling, etc</p>
+				<p>IoT platform, M2M, Smart Toys, Sensor nodes, Middleware, Service Modeling, etc</p>
+				<p>IoT Convergence, CoAP, Building energy optimization</p>
 			</div>	
 		</div>		
 		<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
