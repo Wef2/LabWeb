@@ -1,4 +1,8 @@
-# Github
+# LabWeb
+
+Mobile Computing Laboratory Homepage
+
+## Github
 
 http://github.com/Wef2/LabWeb
 
