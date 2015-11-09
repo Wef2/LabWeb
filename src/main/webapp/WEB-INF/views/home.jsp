@@ -55,7 +55,7 @@
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
 					<h4>
-						<a href="/webpage/research/iot"> IoT<br> <span>M2M, CoAP, Smart Convergence</span></a>
+						<a href="/webpage/research/"> IoT<br> <span>M2M, CoAP, Smart Convergence</span></a>
 					</h4>
 				</div>
 				<div class="item">
@@ -65,8 +65,7 @@
 				</div>
 				<div class="item">
 					<h4>
-						<a href="/webpage/research/embedded">Embedded<br> <span>Galileo, Arduino,
-								Raspberry Pi</span>
+						<a href="/webpage/research/embedded">Embedded<br> <span>Galileo, Arduino, Raspberry Pi</span>
 						</a>
 					</h4>
 				</div>

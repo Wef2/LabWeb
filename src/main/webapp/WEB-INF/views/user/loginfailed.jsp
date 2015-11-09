@@ -5,14 +5,15 @@
 <head>
 <title>Jeju National University Mobile Computing Lab</title>
 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link href="/webpage/resources/css/style.css" rel="stylesheet" type="text/css" />
 <link href="/webpage/resources/css/login.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
 
-	<div class="mainArea">
-		<h1>Login failed</h1>
+	<div class="container-fluid">
+		<h2>Login failed</h2>
 		<a id="retryButton" href="http://localhost:8080/webpage/login">Retry</a>
 	</div>
 

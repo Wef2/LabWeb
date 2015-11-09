@@ -10,8 +10,8 @@
 <body>
 	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
 
-	<div class="mainArea">
-		<h1>Read Failed!</h1>
+	<div class="container-fluid">
+		<h2>Read Failed!</h2>
 		<a href="http://localhost:8080/webpage/board" id="toBoardButton">Board</a>
 	</div>
 

@@ -5,13 +5,14 @@
 <head>
 <title>Jeju National University Mobile Computing Lab</title>
 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link href="/webpage/resources/css/style.css" rel="stylesheet" type="text/css" />
 <link href="/webpage/resources/css/login.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
 
-	<div class="mainArea">
+	<div class="container-fluid">
 		<img id="icon" src="/webpage/resources/images/jnuIcon.jpg"></img>
 		<p id="introText">Hello  ${userID}<p>
 		<p id="introText">안녕하세요 ${userID}님</p>

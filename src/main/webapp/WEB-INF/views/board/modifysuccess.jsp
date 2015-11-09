@@ -4,14 +4,15 @@
 <head>
 <title>Jeju National University Mobile Computing Lab</title>
 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link href="/webpage/resources/css/style.css" rel="stylesheet" type="text/css" />
 <link href="/webpage/resources/css/board.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
 
-	<div class="mainArea">
-		<h1>Modify Success!</h1>
+	<div class="container-fluid">
+		<h2>Modify Success!</h2>
 		<a href="http://localhost:8080/webpage/board" id="toBoardButton">Board</a>
 	</div>
 
