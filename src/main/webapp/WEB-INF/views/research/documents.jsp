@@ -11,19 +11,24 @@
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
-	<div class="mainArea">
-		<jsp:include page="/WEB-INF/views/common/submenu_research.jsp"></jsp:include>
-		<div class="contentArea">
-			<h3>Documents</h3>
-			<c:forEach var="download" items="${list}" varStatus="status">
-				<div class="documentArea">
-				<a href="/webpage/resources/files/${download.link}" class="documentTitle" target="_blank">${download.title}</a>
-				<div class="documentWriter">${download.writer}</div>
-				<div class="documentDate">${download.date}</div>
-				<a href="/webpage/download.do?&fileName=${download.link}"><img src="/webpage/resources/images/download.png" id="downloadIcon" /></a>
+	<jsp:include page="/WEB-INF/views/common/submenu_research.jsp"></jsp:include>
+	<div class="container-fluid bg-grey">
+		<h2>Documents</h2>
+		<c:forEach var="download" items="${list}" varStatus="status">
+			<div class="row downloadForm">
+				<div class="col-sm-8">
+					<div class="titleFont">
+						<a href="/webpage/resources/files/${download.link}" target="_blank">${download.title}</a>
+					</div>
+					<div class="informFont">${download.writer}</div>
+					<div class="informFont">${download.date}</div>
 				</div>
-			</c:forEach>
-		</div>
+				<div class="col-sm-4">
+					<a href="/webpage/download.do?&fileName=${download.link}"><img src="/webpage/resources/images/download.png"
+						id="downloadIcon" /></a>
+				</div>
+			</div>
+		</c:forEach>
 	</div>
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
 

@@ -21,12 +21,12 @@ $(document).ready(function() {
 		}, 800);
 	});
 	
-	$(".col-sm-4").on('mouseover', function(event){
+	$(".logoDiv").on('mouseover', function(event){
 		$(this).css("cursor","pointer");
 		$(this).find("h2").css("color","#3399FF");
 	});
 	
-	$(".col-sm-4").on('mouseout', function(event){
+	$(".logoDiv").on('mouseout', function(event){
 		$(this).find("h2").css("color","#303030");
 	});
 });

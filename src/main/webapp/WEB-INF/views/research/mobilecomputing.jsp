@@ -10,13 +10,11 @@
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
-	<div class="mainArea">
-		<jsp:include page="/WEB-INF/views/common/submenu_research.jsp"></jsp:include>
-		<div class="contentArea">
-			<h3>Mobile Computing</h3>
-			<img src="/webpage/resources/images/android.jpg" />
-			<p>Mobile Computing, Android, Smart Phone</p>
-		</div>
+	<jsp:include page="/WEB-INF/views/common/submenu_research.jsp"></jsp:include>
+	<div class="container-fluid bg-grey text-center">
+		<h2>Mobile Computing</h2>
+		<img src="/webpage/resources/images/android.jpg" />
+		<p>Mobile Computing, Android, Smart Phone</p>
 	</div>
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
 

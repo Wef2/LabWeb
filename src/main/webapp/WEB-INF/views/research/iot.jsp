@@ -12,15 +12,13 @@
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
-	<div class="mainArea">
-		<jsp:include page="/WEB-INF/views/common/submenu_research.jsp"></jsp:include>
-		<div class="contentArea">
-			<h3>IoT</h3>
-			<img id="iotImage" src="/webpage/resources/images/iot.png" />
-			<p>Internet of Things</p>
-			<p>IoT platform, M2M, Smart Toys, Sensor nodes, Middleware, Service Modeling, etc</p>
-			<p>IoT Convergence, CoAP, Building energy optimization</p>
-		</div>
+	<jsp:include page="/WEB-INF/views/common/submenu_research.jsp"></jsp:include>
+	<div class="container-fluid bg-grey text-center">
+		<h2>IoT</h2>
+		<img id="iotImage" src="/webpage/resources/images/iot.png" />
+		<h4>Internet of Things</h4>
+		<p>IoT platform, M2M, Smart Toys, Sensor nodes, Middleware, Service Modeling, etc</p>
+		<p>IoT Convergence, CoAP, Building energy optimization</p>
 	</div>
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
 

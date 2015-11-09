@@ -91,16 +91,11 @@ public class PageController {
 	
 	@RequestMapping(value = "/newsandevents", method = RequestMethod.GET)
 	public String newsandevent(Model model) {
-		List<NewsVo> list = newsService.getNewsList();
-		model.addAttribute("list", list);
-		return "newsandevents/news";
-	}
-
-	@RequestMapping(value = "/newsandevents/events", method = RequestMethod.GET)
-	public String events(Model model) {
-		List<EventVo> list = eventService.getEventList();
-		model.addAttribute("list", list);
-		return "newsandevents/events";
+		List<NewsVo> list1 = newsService.getNewsList();
+		List<EventVo> list2 = eventService.getEventList();
+		model.addAttribute("list1", list1);
+		model.addAttribute("list2", list2);
+		return "newsandevents";
 	}
 
 }

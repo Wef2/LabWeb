@@ -12,7 +12,7 @@
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
-	<div class="mainArea">
+	<div class="container-fluid">
 		<table>
 			<tr class="board_top">
 				<td id="board_number">No</td>

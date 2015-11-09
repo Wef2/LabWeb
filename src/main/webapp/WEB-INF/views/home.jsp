@@ -19,8 +19,8 @@
 			</div>
 			<div class="col-sm-8">
 				<h2>Jeju National University</h2>
-				<p class="font25px">College of Engineering Department of Computer Engineering Mobile Computing Laboratory Our
-					laboratory is located in Jeju National University, Jeju, Korea You can find our location by clicking the button
+				<p class="font25px">College of Engineering, Department of Computer Engineering, Mobile Computing Laboratory. Our
+					laboratory is located in Jeju National University, Jeju, Korea. You can find our location by clicking the button
 					below.</p>
 				<button id="goToMap" class="btn btn-primary btn-lg">Check the Map!</button>
 			</div>

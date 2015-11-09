@@ -7,6 +7,8 @@
 <title>Jeju National University Mobile Computing Lab</title>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link href="/webpage/resources/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/webpage/resources/css/about.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/common/header.jsp"></jsp:include>
@@ -33,11 +35,14 @@
 		<h2>People</h2>
 		<c:forEach var="profile" items="${list}" varStatus="status">
 			<div class="row">
-				<img class="peoplePhoto" src="/webpage/resources/images/${profile.image}" />
-				<div class="col-sm-8">${profile.type}
-					<div class="peopleNameArea">
-						<a class="textColorA" href="/webpage/about/profile?no=${profile.no}">${profile.name}</a>
-					</div>
+				<div class="col-sm-4">
+					<img class="peoplePhoto" src="/webpage/resources/images/${profile.image}">
+				</div>
+				<div class="col-sm-4">
+					<p class="profileType">${profile.type}</p>
+				</div>
+				<div class="col-sm-4">
+					<a class="textColorA" href="/webpage/about/profile?no=${profile.no}">${profile.name}</a>
 				</div>
 			</div>
 		</c:forEach>
