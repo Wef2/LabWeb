@@ -31,28 +31,36 @@
 				</tr>
 			</c:forEach>
 		</table>
-		<div class = "pageArea">
-			<c:forEach var="page" begin="${firstPage}" end="${lastPage}" step="1" >
-			<c:choose>
-			   <c:when test="${keyword != null}"><div class="pageNumber"><a href="board?page=${page}?keyword=${keyword}">${page}</a></div></c:when>
-			   <c:otherwise><div class="pageNumber"><a href="board?page=${page}">${page}</a></div></c:otherwise>
-			</c:choose>			
+		<div class="pageArea">
+			<c:forEach var="page" begin="${firstPage}" end="${lastPage}" step="1">
+				<c:choose>
+					<c:when test="${keyword != null}">
+						<div class="pageNumber">
+							<a href="board?page=${page}?keyword=${keyword}">${page}</a>
+						</div>
+					</c:when>
+					<c:otherwise>
+						<div class="pageNumber">
+							<a href="board?page=${page}">${page}</a>
+						</div>
+					</c:otherwise>
+				</c:choose>
 			</c:forEach>
 		</div>
-		
+
 		<div class="searchArea">
 			<select id="selectOptions">
 				<option>Title</option>
 				<option>ID</option>
 			</select>
 			<form method="get" action="board">
-				<input id="searchInput" type="text" name="keyword" /> 
-				<input type="submit" id="searchButton" value="Search" />
+				<input id="searchInput" type="text" name="keyword" /> <input type="submit" id="searchButton" value="Search" />
 			</form>
 			<a href="/webpage/board/write"><button id="writeButton">Write</button></a>
 		</div>
 	</div>
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
 
+	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>

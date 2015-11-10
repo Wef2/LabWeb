@@ -18,20 +18,21 @@
 			<div class="loginBoxMain">
 				<form method="post" action="userRegister">
 					<p class="loginBoxText">ID</p>
-					<input type="text" id="idInput" name="id"/>
+					<input type="text" id="idInput" name="id" />
 					<p class="loginBoxText">E-Mail Address</p>
-					<input type="text" id="idInput" name="email"/>	
+					<input type="text" id="idInput" name="email" />
 					<p class="loginBoxText">Password</p>
-					<input type="password" id="passwordInput" name="pw"/>	
+					<input type="password" id="passwordInput" name="pw" />
 					<p class="loginBoxText">Confirm your password</p>
-					<input type="password" id="passwordInput" name="confirmPw"/>		
-					<input type="submit" id="loginButton" value="Register"/>
+					<input type="password" id="passwordInput" name="confirmPw" /> <input type="submit" id="loginButton"
+						value="Register" />
 				</form>
 			</div>
-		</div>	
+		</div>
 	</div>
 
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
 
+	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>

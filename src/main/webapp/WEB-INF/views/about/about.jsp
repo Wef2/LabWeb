@@ -34,16 +34,10 @@
 	<div class="container-fluid text-center bg-grey" id="peopleDiv">
 		<h2>People</h2>
 		<c:forEach var="profile" items="${list}" varStatus="status">
-			<div class="row">
-				<div class="col-sm-4">
-					<img class="peoplePhoto" src="/webpage/resources/images/${profile.image}">
-				</div>
-				<div class="col-sm-4">
-					<p class="profileType">${profile.type}</p>
-				</div>
-				<div class="col-sm-4">
-					<a class="textColorA" href="/webpage/about/profile?no=${profile.no}">${profile.name}</a>
-				</div>
+			<div class="col-sm-4 profileArea">
+				<img class="peoplePhoto" src="/webpage/resources/images/${profile.image}">
+				<p class="profileType">${profile.type}</p>
+				<a class="textColorA font20px" href="/webpage/about/profile?no=${profile.no}">${profile.name}</a>
 			</div>
 		</c:forEach>
 	</div>

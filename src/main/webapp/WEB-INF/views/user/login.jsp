@@ -18,16 +18,16 @@
 			<div class="loginBoxMain">
 				<form method="post" action="userLogin">
 					<p class="loginBoxText">ID</p>
-					<input id="idInput" type="text" name="id"/>
+					<input id="idInput" type="text" name="id" />
 					<p class="loginBoxText">Password</p>
-					<input id="passwordInput" type="password" name="pw"/>		
-					<input type="submit" id="loginButton" value="Login"/>
+					<input id="passwordInput" type="password" name="pw" /> <input type="submit" id="loginButton" value="Login" />
 				</form>
 			</div>
-		</div>	
+		</div>
 	</div>
 
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
 
+	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>

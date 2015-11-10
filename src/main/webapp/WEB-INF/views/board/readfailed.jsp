@@ -16,6 +16,6 @@
 	</div>
 
 	<jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
-
+	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>

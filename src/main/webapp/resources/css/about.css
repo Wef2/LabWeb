@@ -1,7 +1,5 @@
 .profileArea{
-	padding:10px;
-	width:800px;
-	height:300px;
+	margin-bottom:50px;
 }
 
 .profilePhoto{
@@ -29,7 +27,7 @@
 	color:#444444;
 }
 
-.infromationArea{
+.informationArea{
 	width:800px;
 	height:350px;
 }
@@ -99,4 +97,8 @@
 
 .textColorA{
 	color:black;
+}
+
+.font20px{
+	font-size:20px;
 }
